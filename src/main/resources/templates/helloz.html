@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
 
@@ -556,9 +556,31 @@
                     </div>
                 </div>
                 <!-- end page title -->
+                <h1 th:text="${zvalue}"></h1>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Role</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="zuser:${zusers}">
+                        <td th:text="${zuser.idusertb}"> </td>
+                        <td th:text="${zuser.firstnamez}"></td>
+                        <td th:text="${zuser.lastnamez}"></td>
+                        <td th:text="${zuser.role}"></td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
 
             </div>
             <!-- container-fluid -->
+
         </div>
         <!-- End Page-content -->
 
